@@ -5,8 +5,16 @@ import people.Visitor;
 
 public class RollerCoaster  extends Attraction implements ISecurity {
 
-    public RollerCoaster(String name, int rating) {
+    private Double startingPrice;
+
+    public RollerCoaster(String name, int rating, Double startingPrice) {
+
         super(name, rating);
+        this.startingPrice = startingPrice;
+    }
+
+    public double getStartingPrice(){
+        return this.startingPrice;
     }
 
     @Override

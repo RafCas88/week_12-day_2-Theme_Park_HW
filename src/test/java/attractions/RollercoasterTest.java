@@ -13,7 +13,7 @@ public class RollercoasterTest {
 
     @Before
     public void setUp() {
-        rollerCoaster = new RollerCoaster("Blue Ridge", 10);
+        rollerCoaster = new RollerCoaster("Blue Ridge", 10, 8.40);
         visitor = new Visitor(13, 146, 11);
     }
 
@@ -35,5 +35,10 @@ public class RollercoasterTest {
     @Test
     public void visitorIsAllowedToRide(){
         assertEquals(true, rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void canGetStartingPrice(){
+       assertEquals(8.40, rollerCoaster.getStartingPrice(), 0.1);
     }
 }
